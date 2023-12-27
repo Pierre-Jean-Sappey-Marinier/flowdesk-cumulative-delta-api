@@ -1,0 +1,43 @@
+{
+  "name": "flowdesk-cumulative-delta",
+  "version": "1.0.0",
+  "description": "REST API which gives us the cumulative delta of a specific trading pair",
+  "main": "app.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint.fix": "eslint . --ext .ts --fix",
+    "format": "prettier --check .",
+    "format.fix": "prettier --write .",
+    "build": "tsc",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint.fix",
+    "*.{ts,md}": "npm run format.fix"
+  },
+    "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
