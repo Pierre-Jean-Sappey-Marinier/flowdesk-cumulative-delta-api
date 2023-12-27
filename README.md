@@ -33,3 +33,37 @@ cd flowdesk-cumulative-delta-api
 ```
 npm install
 ```
+
+# Usage
+
+## Build the TypeScript code:
+
+```
+npm run build
+```
+
+## Start the server:
+
+```
+npm start
+```
+
+The server will start running at http://localhost:3000.
+
+## Start the application with nodemon (automatically restarts on changes):
+
+```
+npm run dev
+```
+
+## Generate test coverage report:
+
+```
+npm run coverage
+```
+
+## Generate ESlint report:
+
+```
+npm run lint
+```
