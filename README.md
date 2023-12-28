@@ -67,3 +67,15 @@ npm run coverage
 ```
 npm run lint
 ```
+
+## Access the cumulative delta endpoint:
+
+GET http://localhost:3000/cumulative-delta?pair=BTC-USDT
+
+(Replace BTC-USDT with the desired trading pair.)
+
+# SWAGGER
+
+## Easier way to test the api
+
+http://localhost:3000/api-docs/#/
