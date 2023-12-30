@@ -3,13 +3,12 @@ import fetchKucoinData from "../services/kucoin.http.service";
 import outputValidation from "../validation/cumulativeDelta.outputValidation";
 import mapOutputTradeHistoryToTradeHistory from "../utils/mapOutputTradeHistoryToTradeHistory.utils";
 import calculateTotalDelta from "../services/cumulativeDelta.service";
-import Logger from "../services/logger";
-
-const logger = new Logger();
+import mapToCumulativeDeltaResponse from "../utils/mapToCumulativeDeltaResponse.utils";
+import { type CumulativeDeltaResponse } from "../types/cumulativeDeltaResponse.type";
 
 export default async function getCumulativeDeltaController(
   query?: Record<string, unknown>
-): Promise<void> {
+): Promise<CumulativeDeltaResponse> {
   inputValidation(query);
 
   const { symbol } = query;
@@ -24,5 +23,7 @@ export default async function getCumulativeDeltaController(
 
   const delta = calculateTotalDelta(tradeHistories);
 
-  logger.log(delta);
+  const mappedResponse = mapToCumulativeDeltaResponse(delta);
+
+  return mappedResponse;
 }
